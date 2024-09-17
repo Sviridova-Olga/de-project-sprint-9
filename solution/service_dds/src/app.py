@@ -2,13 +2,11 @@ import logging
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask
-
+from dds_loader.repository.dds_repository import DdsRepository
 from app_config import AppConfig
 from dds_loader.dds_message_processor_job import DdsMessageProcessor
 
 app = Flask(__name__)
-
-config = AppConfig()
 
 
 @app.get('/health')
@@ -19,7 +17,13 @@ def hello_world():
 if __name__ == '__main__':
     app.logger.setLevel(logging.DEBUG)
 
+    config = AppConfig()
+    pg_repository = DdsRepository(config.pg_warehouse_db())
+
     proc = DdsMessageProcessor(
+        config.kafka_consumer(),
+        pg_repository,
+        config.kafka_producer(),
         app.logger
     )
 
