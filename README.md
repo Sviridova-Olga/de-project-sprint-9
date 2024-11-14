@@ -16,12 +16,14 @@ CDM — две витрины. Первая витрина — счётчик з
 
 Первый канал — это поток заказов в формате JSON, который идёт в Kafka. 
 Пример входного сообщения:  
-![service-order.png](https://github.com/Sviridova-Olga/de-project-sprint-9/tree/main/img/service-order.png)  
+<img src="img/service-order.png"/>  
 
 Второй канал — это словарные данные в формате JSON (блюда, рестораны, пользователи), которые идут в Redis. Пример сообщения:  
-![redis.png](https://github.com/Sviridova-Olga/de-project-sprint-9/tree/main/img/redis.png)  
+<img src="img/redis.png"/>  
+
 ## Архитектура решения выглядит так:    
-![imagef](https://github.com/Sviridova-Olga/de-project-sprint-9/tree/main/img/de-9.png)    
+<img src="img/de-9.png"/>  
+
   
 ## Используемые технологии  
 Python, PostgreSQL, Kafka, Redis, Yandex Cloud,  Kubernetes
