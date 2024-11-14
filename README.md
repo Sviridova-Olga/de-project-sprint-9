@@ -21,7 +21,7 @@ CDM — две витрины. Первая витрина — счётчик з
 Второй канал — это словарные данные в формате JSON (блюда, рестораны, пользователи), которые идут в Redis. Пример сообщения:  
 ![redis.png](https://github.com/Sviridova-Olga/de-project-sprint-9/tree/main/img/redis.png)  
 ## Архитектура решения выглядит так:    
-![image](https://github.com/Sviridova-Olga/de-project-sprint-9/tree/main/img/de-9.png)    
+![imagef](https://github.com/Sviridova-Olga/de-project-sprint-9/tree/main/img/de-9.png)    
   
 ## Используемые технологии  
 Python, PostgreSQL, Kafka, Redis, Yandex Cloud,  Kubernetes
